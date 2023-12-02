@@ -11,6 +11,13 @@ local check_backspace = function()
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
+-- copilot-cmp
+local has_words_before = function()
+  if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_text(0, line-1, 0, line-1, col, {})[1]:match("^%s*$") == nil
+end
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -30,6 +37,8 @@ cmp.setup({
         luasnip.expand({})
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
+      elseif cmp.visible() and has_words_before() then
+        cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
       elseif check_backspace() then
         fallback()
       else
@@ -50,6 +59,7 @@ cmp.setup({
     fields = { "abbr", "kind", "menu" },
     format = function(entry, vim_item)
       vim_item.menu = ({
+        copilot = "🤖",
         luasnip = "🛠️",
         buffer = "📦",
         nvim_lsp = "🔮",
@@ -60,6 +70,7 @@ cmp.setup({
     end,
   },
   sources = {
+    { name = "copilot" },
     { name = "luasnip" },
     { name = "buffer" },
     { name = "nvim_lsp" },

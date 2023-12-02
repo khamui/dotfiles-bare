@@ -61,7 +61,7 @@ require('packer').startup(function(use)
         --Please make sure you install markdown and markdown_inline parser
         {"nvim-treesitter/nvim-treesitter"}
     }
-})
+  })
 
   -- formatting
   use { 'mhartington/formatter.nvim' }

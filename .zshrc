@@ -64,6 +64,9 @@ alias docrun='docker-compose run app sh -c '
 # dotfiles-bare alias
 alias dot='/usr/bin/git --git-dir=$HOME/Repos/dotfiles-bare.git/ --work-tree=$HOME'
 
+# open chrome with localhost
+alias oc="open -a 'Google Chrome' http://localhost:4200"
+
 # python3 alias
 set_python_runtime
 
