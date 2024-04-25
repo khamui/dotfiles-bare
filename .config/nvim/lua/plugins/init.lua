@@ -113,6 +113,14 @@ require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
 
+  -- explorer as buffer
+  use {
+    "stevearc/oil.nvim",
+    config = function()
+      require("oil").setup()
+    end,
+  }
+
   if packer_bootstrap then
     require('packer').sync()
   end

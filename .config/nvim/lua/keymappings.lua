@@ -139,3 +139,6 @@ map("n", "K", "<cmd>Lspsaga hover_doc ++keep<CR>")
 
 -- Floating terminal
 map({"n", "t"}, "∂", "<cmd>Lspsaga term_toggle<CR>")
+
+-- Oil explorer
+map("n", "<leader>-", "<cmd>Oil --float<CR>", { desc = "Open parent directory" })
