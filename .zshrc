@@ -81,6 +81,9 @@ export PATH="/Users/khamui:$PATH"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+### JAVA and CONFLUENCE 
 
-# Load Angular CLI autocompletion.
-# source <(ng completion script)
+#sudo ln -sfn /opt/homebrew/opt/openjdk\@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home'
+export PATH=$PATH:$JAVA_HOME/bin
+
