@@ -20,7 +20,7 @@ require('nvim-treesitter.configs').setup {
     keymaps = {
       init_selection = '<leader><space>',
       node_incremental = '<leader><space>',
-      scope_inmremental = 'grc',
+      scope_incremental = 'grc',
       node_decremental = 'grm',
     },
   },

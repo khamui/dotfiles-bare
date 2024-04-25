@@ -44,7 +44,7 @@ require('packer').startup(function(use)
 
   -- enhance language servers
   use({
-    "glepnir/lspsaga.nvim",
+    "nvimdev/lspsaga.nvim",
     after = "nvim-lspconfig",
     config = function()
         require("lspsaga").setup({
