@@ -18,7 +18,7 @@ require('lualine').setup {
     }
   },
   sections = {
-    lualine_a = {'mode'},
+    lualine_a = {'mode', require("plugins.configs.utils").recording},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {{'filename', path = 1}},
     lualine_x = {'selectioncount', 'fileformat', 'filetype'},
