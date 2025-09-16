@@ -29,8 +29,7 @@ map('n', '_', 'ddkP')
 map('n', '<leader>o', 'o<ESC>')
 map('n', '<leader>O', 'O<ESC>')
 map('n', '<leader>w', ':FormatWrite<CR>')
-map('n', '<leader>yl', '0v$"*y')
-map('n', '<leader>y', 'viw"*y')
+map('n', '<leader>yl', '0v$"*y') map('n', '<leader>y', 'viw"*y')
 map('n', '<leader>r', 'viwp')
 
 ----------------------------------

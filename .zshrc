@@ -82,8 +82,8 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 ### JAVA and CONFLUENCE 
-
-#sudo ln -sfn /opt/homebrew/opt/openjdk\@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+export ATLAS_HOME='/opt/homebrew/Cellar/atlassian-plugin-sdk/8.2.10/libexec/'
+#sudo ln -sfn /opt/homebrew/opt/java/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home'
-export PATH=$PATH:$JAVA_HOME/bin
-
+#export JAVA_HOME='/opt/homebrew/opt/java/libexec/openjdk.jdk'
+export PATH=$PATH:$JAVA_HOME/bin:$ATLAS_HOME/bin
